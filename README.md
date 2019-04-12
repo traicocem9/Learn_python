@@ -1,7 +1,7 @@
 # Learn_python
 các bài học hằng ngày được lưu trong đây
 
-15/3 Pygame
+15/3/2019 Pygame
 
 25/3/2019 Pre-package
 
