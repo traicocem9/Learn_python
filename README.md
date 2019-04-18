@@ -13,4 +13,10 @@ các bài học hằng ngày được lưu trong đây
 
 11/4/2019 Bounce! game 
 
-12/4/2019 
+13/4/2019 sklearn Điền missing value
+
+15/4/2019 sklearn Train, test 
+
+16/4/2019 import a file and have the data read (chua xong)
+
+18/4/2019 Ham tuyen tinh
