@@ -1,8 +1,12 @@
 import pygame
 import random
 import sys
-
+from os import path
 pygame.init()
+
+#img dir
+img_dir = path.join(path.dirname(__file__), 'asset')
+
 
 WIDTH = 800
 HEIGHT = 600
@@ -31,6 +35,29 @@ clock = pygame.time.Clock()
 
 myFont = pygame.font.SysFont("monospace", 35)
 
+def main_menu():
+	global screen
+	#menu_song
+	#pygame.mixer
+
+	title = pygame.image.load(path.join(img_dir, "Mainmenu.png")).convert()
+	title = pygame.transform.scale(title, (WIDTH, HEIGHT), screen)
+
+	screen.blit(title,(0,0))
+	pygame.display.update()
+
+	while True:
+        ev = pygame.event.poll()
+		
+		if ev.type == pygame.KEYDOWN:
+			if ev.key == pygame.K_RETURN:
+				break
+            elif ev.key == pygame.K_q:
+                pygame.quit()
+                quit()
+        elif ev.type == pygame.QUIT:
+                pygame.quit()
+                quit() 
 def set_level(score, SPEED):
 	if score < 20:
 		SPEED = 5
@@ -84,21 +111,20 @@ def detect_collision(player_pos, enemy_pos):
 
 while not game_over:
 
+	main_menu()
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			sys.exit()
 
-		if event.type == pygame.KEYDOWN:
+	keys = pygame.key.get_pressed()
 
-			x = player_pos[0]
-			y = player_pos[1]
-
-			if event.key == pygame.K_LEFT:
-				x -= player_size
-			elif event.key == pygame.K_RIGHT:
-				x += player_size
-
-			player_pos = [x,y]
+	x = player_pos[0]
+	y = player_pos[1]
+	if keys[pygame.K_LEFT]:
+		x -= 10
+	if keys[pygame.K_RIGHT]:
+		x += 10	
+	player_pos = [x,y]
 
 	screen.fill(BACKGROUND_COLOR)
 
