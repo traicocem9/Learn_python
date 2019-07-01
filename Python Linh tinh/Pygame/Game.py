@@ -37,7 +37,7 @@ myFont = pygame.font.SysFont("monospace", 35)
 
 def main_menu():
 	global screen
-	#menu_song
+	#menu_songg
 	#pygame.mixer
 
 	title = pygame.image.load(path.join(img_dir, "Mainmenu.png")).convert()
