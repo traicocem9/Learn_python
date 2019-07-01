@@ -145,7 +145,7 @@ while(done):
                 else:
                     X += str(numbers[i][line])
             except:
-                X += "          "
+                X += "         "
         lines[x] += X
         line += 1
 	
