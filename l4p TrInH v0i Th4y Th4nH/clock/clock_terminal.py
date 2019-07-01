@@ -1,5 +1,5 @@
-# Pedro Rodrigues
-
+#https://github.com/paydrone/Python-Terminal-Clock/blob/master/clock.py
+	
 from time import sleep
 import os
 import datetime
