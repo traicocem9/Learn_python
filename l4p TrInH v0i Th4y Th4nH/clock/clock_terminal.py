@@ -1,5 +1,5 @@
-# Pedro Rodrigues
-
+#https://github.com/paydrone/Python-Terminal-Clock/blob/master/clock.py
+	
 from time import sleep
 import os
 import datetime
@@ -151,13 +151,12 @@ while(done):
 	
     #print lines
 
-    for x in range(9):
         print (lines[x])
 
     #done = False
 
     print
-    sleep(0.1)
+    sleep(0.01)
     os.system("clear")
 
 

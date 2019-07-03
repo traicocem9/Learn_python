@@ -46,18 +46,18 @@ def main_menu():
 	screen.blit(title,(0,0))
 	pygame.display.update()
 
-	while True:
-        ev = pygame.event.poll()
+	while True :
+		ev = pygame.event.poll()
 		
 		if ev.type == pygame.KEYDOWN:
 			if ev.key == pygame.K_RETURN:
 				break
-            elif ev.key == pygame.K_q:
-                pygame.quit()
-                quit()
-        elif ev.type == pygame.QUIT:
-                pygame.quit()
-                quit() 
+			elif ev.key == pygame.K_q:
+				pygame.quit()
+				quit()
+		elif ev.type == pygame.QUIT:
+				pygame.quit()
+				quit() 
 def set_level(score, SPEED):
 	if score < 20:
 		SPEED = 5
